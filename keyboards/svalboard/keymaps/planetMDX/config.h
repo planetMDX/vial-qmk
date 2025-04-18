@@ -8,18 +8,20 @@
 // Vial security combos, depending on which unit this is...
 #ifdef INIT_EE_HANDS_RIGHT
 // right thumb lock
-#define VIAL_UNLOCK_COMBO_ROWS { 5, 5 }
-#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
+#    define VIAL_UNLOCK_COMBO_ROWS {5, 5}
+#    define VIAL_UNLOCK_COMBO_COLS {0, 1}
 #elif INIT_EE_HANDS_LEFT
 // left thumb lock
-#define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
-#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
+#    define VIAL_UNLOCK_COMBO_ROWS {0, 0}
+#    define VIAL_UNLOCK_COMBO_COLS {0, 1}
 #else
 // both thumb locks
-#define VIAL_UNLOCK_COMBO_ROWS { 0, 0, 5, 5 }
-#define VIAL_UNLOCK_COMBO_COLS { 2, 5, 2, 5 }
+#    define VIAL_UNLOCK_COMBO_ROWS {0, 0, 5, 5}
+#    define VIAL_UNLOCK_COMBO_COLS {2, 5, 2, 5}
 #endif
 
 // Shorten the unlock timeout (needs mod in `quantum/vial.c`; without
 // it the override doesn't work)
 #define VIAL_UNLOCK_COUNTER_MAX 12
+
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
